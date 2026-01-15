@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Tech – by SK</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span data-en="Agri Tech" data-ta="அக்ரி டெக்">Agri Tech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                <li><a href="#advisory" data-en="Crop Advisory" data-ta="பயிர் ஆலோசனை">Crop Advisory</a></li>
+                <li><a href="#iot" data-en="IoT Failure" data-ta="IoT பாடங்கள்">IoT Failure</a></li>
+                <li><a href="#drone" data-en="Drone Tech" data-ta="ட்ரோன் தொழில்நுட்பம்">Drone Tech</a></li>
+                <li><a href="#myth" data-en="Myth vs Science" data-ta="உண்மை vs கட்டுக்கதை">Myth vs Science</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="btn-outline">
+                    <i class="fa-solid fa-language"></i> <span id="lang-text">தமிழ்</span>
+                </button>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#hero" data-en="Home" data-ta="முகப்பு">Home</a>
+        <a href="#advisory" data-en="Crop Advisory" data-ta="பயிர் ஆலோசனை">Crop Advisory</a>
+        <a href="#iot" data-en="IoT Failure" data-ta="IoT பாடங்கள்">IoT Failure</a>
+        <a href="#drone" data-en="Drone Tech" data-ta="ட்ரோன் தொழில்நுட்பம்">Drone Tech</a>
+        <a href="#myth" data-en="Myth vs Science" data-ta="உண்மை vs கட்டுக்கதை">Myth vs Science</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span data-en="Translating Agricultural Science into" data-ta="வேளாண் அறிவியலை">Translating Agricultural
+                    Science into</span>
+                <span class="highlight" data-en="Field Intelligence" data-ta="கள அறிவாக மாற்றுகிறோம்">Field
+                    Intelligence</span>
+            </h1>
+            <p class="hero-subtitle" data-en="A Smart, Student-Built, Farmer-First Agri Knowledge Platform."
+                data-ta="மாணவர்களால் உருவாக்கப்பட்ட, விவசாயிகளுக்கான அறிவு தளம்.">
+                A Smart, Student-Built, Farmer-First Agri Knowledge Platform.
+            </p>
+            <div class="hero-buttons">
+                <a href="#advisory" class="btn-primary">
+                    <i class="fa-solid fa-seedling"></i> <span data-en="Get Crop Advice" data-ta="ஆலோசனை பெற">Get Crop
+                        Advice</span>
+                </a>
+                <a href="#iot" class="btn-secondary">
+                    <i class="fa-solid fa-wifi"></i> <span data-en="Explore IoT" data-ta="IoT தொழில்நுட்பம்">Explore
+                        IoT</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Crop Advisory Section -->
+    <section id="advisory" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Field Decision Assistant</span>
+                <h2>Crop Advisory Tool</h2>
+                <p>Get personalized farming advice based on your local conditions.</p>
+            </div>
+
+            <div class="advisory-container">
+                <div class="advisory-form card">
+                    <h3><i class="fa-solid fa-sliders"></i> Input Details</h3>
+                    <form id="crop-form">
+                        <div class="form-group">
+                            <label for="crop">Select Crop</label>
+                            <select id="crop" required>
+                                <option value="" disabled selected>Choose Crop</option>
+                                <option value="paddy">Paddy (Rice)</option>
+                                <option value="cotton">Cotton</option>
+                                <option value="maize">Maize</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">District</label>
+                            <select id="district" required>
+                                <option value="" disabled selected>Select District</option>
+                                <option value="coimbatore">Coimbatore</option>
+                                <option value="thanjavur">Thanjavur</option>
+                                <option value="madurai">Madurai</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="soil">Soil Type</label>
+                            <select id="soil">
+                                <option value="clay">Clay Soil</option>
+                                <option value="red">Red Soil</option>
+                                <option value="alluvial">Alluvial Soil</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="stage">Growth Stage</label>
+                            <select id="stage">
+                                <option value="sowing">Sowing/Planting</option>
+                                <option value="vegetative">Vegetative</option>
+                                <option value="flowering">Flowering</option>
+                                <option value="harvest">Harvest</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Get Recommendation</button>
+                    </form>
+                </div>
+
+                <div id="advisory-result" class="advisory-result card hidden">
+                    <div class="result-header">
+                        <h3><i class="fa-solid fa-clipboard-check"></i> Recommendation</h3>
+                        <button id="close-result" class="btn-icon"><i class="fa-solid fa-times"></i></button>
+                    </div>
+                    <div class="result-content">
+                        <!-- Dynamic Content Will Load Here -->
+                        <div class="result-item">
+                            <h4><i class="fa-solid fa-flask"></i> Fertilizer Schedule</h4>
+                            <p id="res-fertilizer">Loading...</p>
+                        </div>
+                        <div class="result-item">
+                            <h4><i class="fa-solid fa-bug"></i> Pest & Disease Alert</h4>
+                            <p id="res-pest">Loading...</p>
+                        </div>
+                        <div class="result-item">
+                            <h4><i class="fa-solid fa-droplet"></i> Irrigation Tips</h4>
+                            <p id="res-water">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IoT Failure Zone -->
+    <section id="iot" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-blue">IoT Logic</span>
+                <h2>IoT Failure Learning Zone</h2>
+                <p>Common failures in Smart Irrigation systems and how to fix them.</p>
+            </div>
+
+            <div class="iot-grid">
+                <!-- Card 1 -->
+                <div class="iot-card">
+                    <div class="iot-icon error">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3>Sensor Drift</h3>
+                    <p>Moisture sensor showing 0% even in wet soil.</p>
+                    <button class="btn-text" onclick="toggleIotDetail('iot-1')">View Root Cause</button>
+                    <div id="iot-1" class="iot-detail hidden">
+                        <ul>
+                            <li><strong>RCA:</strong> Soil salinity corrosion on probes.</li>
+                            <li><strong>Fix:</strong> Clean probes with sandpaper or replace with capacitive sensor.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="iot-card">
+                    <div class="iot-icon warning">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3>Gateway Disconnect</h3>
+                    <p>No data upload to cloud for > 1 hour.</p>
+                    <button class="btn-text" onclick="toggleIotDetail('iot-2')">View Root Cause</button>
+                    <div id="iot-2" class="iot-detail hidden">
+                        <ul>
+                            <li><strong>RCA:</strong> Power fluctuation or SIM card expiry.</li>
+                            <li><strong>Fix:</strong> Install UPS for gateway & check data plan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="iot-card">
+                    <div class="iot-icon info">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3>Valve Stuck Open</h3>
+                    <p>Water flowing despite "OFF" command.</p>
+                    <button class="btn-text" onclick="toggleIotDetail('iot-3')">View Root Cause</button>
+                    <div id="iot-3" class="iot-detail hidden">
+                        <ul>
+                            <li><strong>RCA:</strong> Solenoid valve diaphragm debris blockage.</li>
+                            <li><strong>Fix:</strong> Open valve head and clean the diaphragm spring.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drone & Smart Farming -->
+    <section id="drone" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-purple">Future Tech</span>
+                <h2>Drone & Smart Farming</h2>
+                <p>Modern tools for the next generation of farmers.</p>
+            </div>
+            <div class="drone-content">
+                <div class="drone-text">
+                    <h3>NDVI (Normalized Difference Vegetation Index)</h3>
+                    <p>NDVI helps measure crop health from the sky. Green plants reflect infrared light!</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>High NDVI:</strong> Healthy, vibrant crop.
+                        </li>
+                        <li><i class="fa-solid fa-times-circle"></i> <strong>Low NDVI:</strong> Stressed or dead crop.
+                        </li>
+                    </ul>
+                    <div class="comparison-table">
+                        <div class="table-row head">
+                            <div>Method</div>
+                            <div>Cost</div>
+                            <div>Accuracy</div>
+                        </div>
+                        <div class="table-row">
+                            <div>Satellite</div>
+                            <div>Low</div>
+                            <div>Medium</div>
+                        </div>
+                        <div class="table-row highlight">
+                            <div>Drone</div>
+                            <div>High</div>
+                            <div>Very High</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drone-visual">
+                    <!-- Placeholder for Drone Graphic -->
+                    <div class="visual-placeholder">
+                        <i class="fa-solid fa-plane-up"></i>
+                        <span>Drone Mapping Simulation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Myth vs Science -->
+    <section id="myth" class="section bg-pattern">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge badge-orange">Education</span>
+                <h2>Myth vs Science</h2>
+                <p>Debunking common agricultural misconceptions.</p>
+            </div>
+
+            <div class="myth-container">
+                <div class="myth-card">
+                    <div class="myth-header wrong">
+                        <i class="fa-solid fa-xmark"></i> Myth
+                    </div>
+                    <div class="myth-body">
+                        <h3>"More Fertilizer = More Yield"</h3>
+                    </div>
+                    <div class="myth-science">
+                        <div class="science-header correct">
+                            <i class="fa-solid fa-check"></i> Science
+                        </div>
+                        <p>Excess fertilizer causes soil salinity and burns roots. Follow NPK ratio!</p>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <div class="myth-header wrong">
+                        <i class="fa-solid fa-xmark"></i> Myth
+                    </div>
+                    <div class="myth-body">
+                        <h3>"Chemicals are always bad"</h3>
+                    </div>
+                    <div class="myth-science">
+                        <div class="science-header correct">
+                            <i class="fa-solid fa-check"></i> Science
+                        </div>
+                        <p>Judicious use of chemicals saves crops from total loss during severe outbreaks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Agri Tech</h3>
+                <p>Student Project by SK</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#advisory">Advisory</a>
+                <a href="#iot">IoT</a>
+            </div>
+            <div class="footer-disclaimer">
+                <p><strong>Disclaimer:</strong> This is an educational replica project. Not an official TNAU website.
+                </p>
+                <p>&copy; 2026 Agri Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
